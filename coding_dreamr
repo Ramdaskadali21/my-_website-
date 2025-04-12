@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodingDreamr</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .shrink {
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+    }
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .submenu {
+      display: none;
+    }
+    /* Arrow for dropdown */
+    .dropdown > a::after {
+      content: ' ▼';
+      font-size: 0.7rem;
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+    .dropdown:hover > a::after {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Header -->
+  <header id="header" class="sticky top-0 z-50 bg-white shadow transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+      <div class="text-2xl font-extrabold">CodingDreamr</div>
+      <nav class="hidden md:flex gap-6 font-semibold">
+        <a href="#" class="hover:text-purple-600">Home</a>
+        <a href="#" class="hover:text-purple-600">Blog</a>
+        <div class="relative dropdown">
+          <a href="#" class="hover:text-purple-600">HTML & CSS</a>
+          <ul class="submenu absolute bg-white mt-2 shadow rounded w-48 p-2 space-y-1 z-50">
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Login Forms</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Website Designs</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Navigation Bars</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Sidebar Menu</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Card Designs</a></li>
+            <li class="relative group">
+              <a href="#" id="moreBtn" class="block px-4 py-2 hover:bg-gray-100">More</a>
+              <ul id="moreSubmenu" class="hidden absolute left-full top-0 bg-white shadow rounded w-56 p-2 space-y-1 z-50">
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">CSS Buttons</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Glowing Effects</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Social Media Buttons</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Preloader or Loaders</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Neumorphism Designs</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="hover:text-purple-600">JavaScript</a>
+        <a href="#" class="hover:text-purple-600">React JS</a>
+        <a href="#" class="hover:text-purple-600">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <input type="text" placeholder="Search..." class="border px-3 py-1 rounded-md" />
+        <button class="bg-black text-white px-3 py-1 rounded">🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Expanded Submenu Panel Below Navbar -->
+  <div id="morePanel" class="hidden absolute left-0 w-full bg-white shadow-md z-40">
+    <div class="max-w-7xl mx-auto px-4 py-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded">CSS Buttons</a>
+      <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded">Glowing Effects</a>
+      <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded">Social Media Buttons</a>
+      <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded">Preloader or Loaders</a>
+      <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded">Neumorphism Designs</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="py-16">
+    <section class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+      <div class="border rounded-lg p-6 shadow hover:shadow-lg transition">
+        <div class="text-4xl mb-4">📄</div>
+        <h3 class="text-xl font-bold mb-2">Create Sidebar with Dropdown Menu</h3>
+        <p class="text-sm text-gray-600">HTML CSS & JavaScript – Jan 20, 2025</p>
+      </div>
+      <div class="border rounded-lg p-6 shadow hover:shadow-lg transition">
+        <div class="text-4xl mb-4">📄</div>
+        <h3 class="text-xl font-bold mb-2">Responsive Sidebar Menu</h3>
+        <p class="text-sm text-gray-600">HTML CSS & JavaScript – Nov 7, 2024</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-200 mt-16 pt-10 pb-6">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-12">
+      <div class="md:w-1/2">
+        <img src="https://dummyimage.com/160x60/007bff/fff&text=CodingDreamr" class="mb-4" alt="Logo">
+        <h4 class="text-lg font-semibold mb-2">About Us</h4>
+        <p class="text-gray-400 text-sm mb-2">
+          CodingDreamr is a blog dedicated to providing valuable and informative content
+          about web development technologies such as HTML, CSS, JavaScript, ReactJS, and PHP.
+        </p>
+        <a href="#" class="text-blue-400 text-sm">Read more</a>
+      </div>
+
+      <div class="md:w-1/2">
+        <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+        <div class="flex space-x-4 text-xl">
+          <a href="#" class="hover:text-blue-500">📘</a>
+          <a href="#" class="hover:text-pink-500">📷</a>
+          <a href="#" class="hover:text-green-400">🔊</a>
+          <a href="#" class="hover:text-red-500">▶️</a>
+        </div>
+        <div class="mt-6 space-x-4 text-sm">
+          <a href="#" class="text-gray-400 hover:text-white">About us</a>
+          <a href="#" class="text-gray-400 hover:text-white">Terms</a>
+          <a href="#" class="text-gray-400 hover:text-white">Privacy</a>
+          <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-8 text-xs text-gray-500">© 2025 CodingDreamr. All Rights Reserved.</div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 20) {
+        header.classList.add('shrink');
+      } else {
+        header.classList.remove('shrink');
+      }
+    });
+
+    document.getElementById('moreBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      const panel = document.getElementById('morePanel');
+      panel.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', function(e) {
+      const panel = document.getElementById('morePanel');
+      const button = document.getElementById('moreBtn');
+      if (!button.contains(e.target) && !panel.contains(e.target)) {
+        panel.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>
